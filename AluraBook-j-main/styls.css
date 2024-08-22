@@ -1,4 +1,6 @@
+
 @import url("styles/header.css");
+@import url("styles/banner.css");
 
 :root{
     --cor-de-fundo:  #EBECEE;
@@ -6,7 +8,7 @@
 
 body{
     background-color: var(--cor-de-fundo);
-    font-family: var(--fonte-principal)
+    font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
 }
@@ -30,3 +32,46 @@ h1 {
     --fonte-principal: "Poppins";
 }
 
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.container {
+    display: flex;
+    align-items: center;
+}
+.container__imagem {
+    padding: 1em;
+}
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+  }
+  .container__botao:checked ~.lista-menu {
+    display: block;
+  }
+    
+.lista-menu__titulo, .lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco );
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+}
+
+.lista-menu__item__link {
+   
+        background: var(--azul-degrade);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-transform: uppercase;
+
+      
+}
